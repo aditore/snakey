@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "snake",
   "resources": [
+    {"id":{"name":"obj_snakeBody","path":"objects/obj_snakeBody/obj_snakeBody.yy",},"order":2,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":1,},
     {"id":{"name":"spr_snakeBody","path":"sprites/spr_snakeBody/spr_snakeBody.yy",},"order":1,},
     {"id":{"name":"spr_snakeHead","path":"sprites/spr_snakeHead/spr_snakeHead.yy",},"order":0,},

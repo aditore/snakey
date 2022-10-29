@@ -1,9 +1,11 @@
 /// Direction show
 if(currentId == 0) {
 //Direction 0 right, 1 left, 2 up, 3 down
-	currentId += 1;
-	alarm[0] = 15;
-
+	
+	if (currentId == (global.head - 1)) {
+		instance_destroy();
+	}
+	
 	switch(global.dir) {
 	
 		case 0:
@@ -20,9 +22,6 @@ if(currentId == 0) {
 			break;
 	}
 	
-
-} else if (currentId == (global.length - 1)) {
-	instance_destroy();
 } else {
 	currentId += 1;
 	alarm[0] = 15;
