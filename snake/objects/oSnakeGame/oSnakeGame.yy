@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_snakeBody",
-  "spriteId": {
-    "name": "spr_snakeBody",
-    "path": "sprites/spr_snakeBody/spr_snakeBody.yy",
-  },
+  "name": "oSnakeGame",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,7 +21,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
