@@ -9,6 +9,16 @@ snakeGrid = ds_grid_create(width, height);
 
 length = 4;
 
-init_snake(snakeGrid, width / 2, height / 2, length);
+
+headX = width / 2;
+headY = height / 2;
+
+snakeDir = DIRECTIONS.right;
+
+init_snake(snakeGrid, headX, headY, length);
 tilemap_clear(snakeTileMap, 0);
 snake_grid_to_tilemap(snakeGrid, snakeTileMap);
+
+updateSpeed = 20;
+
+alarm[0] = updateSpeed;

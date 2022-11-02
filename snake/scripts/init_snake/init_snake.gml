@@ -1,8 +1,4 @@
 /// @function			init_snake(grid, px, py, l);
-/// @param grid
-/// @param x
-/// @param y
-/// @param length
 
 function init_snake(grid, px, py, l) {
 	var w = ds_grid_width(grid);

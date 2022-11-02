@@ -10,7 +10,7 @@ function snake_grid_to_tilemap(grid, tilemap){
 	for(var ix = 0; ix < w; ix++)
 	for(var iy = 0; iy < h; iy++) {
 
-		if(grid[#ix, iy]) {
+		if(grid[# ix, iy]) {
 			tilemap_set(tilemap, 1, ix, iy);
 		}
 
