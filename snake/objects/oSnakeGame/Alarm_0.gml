@@ -5,6 +5,7 @@ snake_update();
 
 tilemap_clear(snakeTileMap, 0);
 snake_grid_to_tilemap(snakeGrid, snakeTileMap);
+food_grid_to_tilemap(foodGrid, snakeTileMap);
 
 
 

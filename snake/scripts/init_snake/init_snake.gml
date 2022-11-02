@@ -1,6 +1,7 @@
-/// @function			init_snake(grid, px, py, l);
+/// @function			init_snake(grid, dirGrid, px, py, length, direction);
 
-function init_snake(grid, px, py, l) {
+function init_snake(grid, dirGrid, px, py, l, dir) {
+	var od = dir_opposite(dir);
 	var w = ds_grid_width(grid);
 	var h = ds_grid_height(grid);
 
@@ -8,10 +9,18 @@ function init_snake(grid, px, py, l) {
 
 	for(var i = l; i > 0; i--){
 		grid[# px, py] = i;
-		px--;
+		dirGrid[# px, py] = dir;
+		
+		var d = global.directions[od];
+		px += d[0];
+		py += d[1];
 	
 		if (px < 0) {
 			show_error("SNAKE OUT OF BOUNDS", true)
 		}
 	}
+}
+
+function dir_opposite(dir) {
+	return dir ^ 2;
 }

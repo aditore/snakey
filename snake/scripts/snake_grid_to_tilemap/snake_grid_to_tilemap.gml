@@ -1,17 +1,21 @@
 /// @function			snake_grid_to_tilemap(grid, tilemap)
-///@param grid
-///@param tilemap
 
-function snake_grid_to_tilemap(grid, tilemap){
+function snake_grid_to_tilemap() {
+	for(var ix = 0; ix < width; ix++)
+	for(var iy = 0; iy < height; iy++) {
 
-	var w = ds_grid_width(grid);
-	var h = ds_grid_height(grid);
-
-	for(var ix = 0; ix < w; ix++)
-	for(var iy = 0; iy < h; iy++) {
-
-		if(grid[# ix, iy]) {
-			tilemap_set(tilemap, 1, ix, iy);
+		if(snakeGrid[# ix, iy]) {
+			var tileData = 1;
+			if (snakeGrid[# ix, iy] == length) {
+				tileData = 2;
+			}
+			if (snakeGrid[# ix, iy] == 1) {
+				tileData = 3;
+			}
+			
+			tileData |= global.tile_flags[snakeDirGrid[# ix, iy]];
+			
+			tilemap_set(snakeTileMap, tileData, ix, iy);
 		}
 
 	}
