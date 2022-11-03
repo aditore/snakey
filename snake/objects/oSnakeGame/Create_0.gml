@@ -23,6 +23,6 @@ tilemap_clear(snakeTileMap, 0);
 snake_grid_to_tilemap();
 add_random_food();
 
-updateSpeed = 20;
+updateSpeed = 5;
 
 alarm[0] = updateSpeed;

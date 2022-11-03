@@ -9,7 +9,7 @@ function init_snake(grid, dirGrid, px, py, l, dir) {
 
 	for(var i = l; i > 0; i--){
 		grid[# px, py] = i;
-		dirGrid[# px, py] = dir;
+		dirGrid[# px, py] = dir | (dir << 2);
 		
 		var d = global.directions[od];
 		px += d[0];

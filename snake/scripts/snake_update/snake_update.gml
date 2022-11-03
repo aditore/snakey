@@ -1,7 +1,6 @@
 /// @function			snake_move()
 function snake_update(){
 	
-	prevSnakeDir = snakeDir;
 	
 	ds_grid_add_region(snakeGrid, 0, 0, width, height, -1);
 	
@@ -9,7 +8,7 @@ function snake_update(){
 	var dx = d[0];
 	var dy = d[1];
 	
-	snakeDirGrid[# headX, headY] = snakeDir;
+	snakeDirGrid[# headX, headY] = snakeDir | (prevSnakeDir << 2);
 	
 	headX += dx;
 	headY += dy;
@@ -22,7 +21,7 @@ function snake_update(){
 	}
 	
 	snakeGrid[# headX, headY] = length;
-	snakeDirGrid[# headX, headY] = snakeDir;
+	snakeDirGrid[# headX, headY] = snakeDir | (prevSnakeDir << 2);
 	
 	//eat food
 	if (foodGrid[# headX, headY]) {
@@ -31,5 +30,6 @@ function snake_update(){
 		length++;
 	}
 	
+	prevSnakeDir = snakeDir;
 	
 }
